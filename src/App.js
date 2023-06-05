@@ -9,7 +9,8 @@ import { Users } from './components/Users';
 
 function App() {
   const serverUserList = 'https://reqres.in/api/users';
-  const [users, setUsers] = useState();
+  const [users, setUsers] = useState([]);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
       fetch(serverUserList)
@@ -21,12 +22,13 @@ function App() {
                   console.log(err);
                   alert('Error with data server.')
               }
-          )}
-      , []);
+          )
+          .finally(() => setLoading(false))
+      }, []);
 
   return (
     <div className="App">
-      <Users items={users}/>
+      <Users items={users} isLoading={isLoading} />
       {/* <Success />*/}
     </div>
   );
