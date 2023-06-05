@@ -1,6 +1,8 @@
 # Generral project data
 Using Skeleton component with Loading checking.
 Using useEffect() hook.
+Working with controlled input
+
 
 # Getting Started with Create React App
 
