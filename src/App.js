@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
       fetch(serverUserList)
-          .then((res)=> res.json())
+          .then((res) => res.json())
           .then((json) => {
               setUsers(json.data);
           })
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      <Users />
+      <Users items={users}/>
       {/* <Success />*/}
     </div>
   );

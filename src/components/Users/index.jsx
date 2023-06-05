@@ -19,6 +19,9 @@ export const Users = ({ items, isLoading }) => {
         </div>
       ) : (
         <ul className="users-list">
+            {items.map((obj) =>
+                <User/>
+            )}
           <User />
         </ul>
       )}
