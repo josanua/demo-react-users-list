@@ -29,9 +29,7 @@ export const Users = ({items, isLoading, searchValue, onChangeSearchValue }) => 
             {items.filter(obj => {
                 const fullName = obj.first_name + obj.last_name;
 
-                if (fullName.includes(searchValue)) {
-                    return true;
-                }
+                return fullName.includes(searchValue) || obj.email.includes(searchValue)
             }).map((obj) =>
                 <User key={obj.id} {...obj} />
             )}
