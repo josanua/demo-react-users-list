@@ -8,7 +8,8 @@ export const Users = ({
     searchValue,
     onChangeSearchValue,
     invites,
-    onClickInvite
+    onClickInvite,
+    onClickSendInvites
 }) => {
 
     return (
@@ -49,7 +50,11 @@ export const Users = ({
                         )}
                 </ul>
             )}
-            <button className="send-invite-btn">Invite</button>
+            {invites.length > 0 && (
+                <button
+                    onClick={() => onClickSendInvites()}
+                    className="send-invite-btn">Invite users</button>
+            )}
         </>
     );
 };
