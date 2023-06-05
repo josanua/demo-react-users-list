@@ -1,3 +1,7 @@
+# Generral project data
+Using Skeleton component with Loading checking.
+Using useEffect() hook.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -2,7 +2,7 @@ import React from 'react';
 import { Skeleton } from './Skeleton';
 import { User } from './User';
 
-export const Users = ({ items, isLoading }) => {
+export const Users = ({items, isLoading }) => {
   return (
     <>
       <div className="search">
@@ -20,9 +20,8 @@ export const Users = ({ items, isLoading }) => {
       ) : (
         <ul className="users-list">
             {items.map((obj) =>
-                <User/>
+                <User key={obj.id} {...obj} />
             )}
-          <User />
         </ul>
       )}
       <button className="send-invite-btn">Invite</button>

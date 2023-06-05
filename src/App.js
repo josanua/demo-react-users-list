@@ -5,8 +5,6 @@ import { Users } from './components/Users';
 
 // Users list: https://reqres.in/api/users
 
-
-
 function App() {
   const serverUserList = 'https://reqres.in/api/users';
   const [users, setUsers] = useState([]);
